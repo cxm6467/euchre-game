@@ -1,14 +1,18 @@
 # Euchre Game - React + Ruby Implementation
 
-A complete reimplementation of the classic Euchre card game using **React** for the frontend and **Ruby (Sinatra)** for the backend.
+A complete reimplementation of the classic Euchre card game using **React**, **TypeScript**, **Material-UI** for the frontend and **Ruby (Sinatra)** for the backend.
+
+Built with **Atomic Design** principles and configured for **LAN access**.
 
 ## 🚀 Tech Stack
 
 ### Frontend
 - **React 18.3** - Modern UI library with hooks
+- **TypeScript 5.5** - Type-safe JavaScript
+- **Material-UI 5.15** - React component library
 - **Vite** - Fast build tool and dev server
 - **Context API** - Global state management
-- **CSS3** - Responsive styling with animations
+- **Atomic Design** - Component architecture methodology
 
 ### Backend
 - **Ruby 3.x** - Server-side language
@@ -16,38 +20,56 @@ A complete reimplementation of the classic Euchre card game using **React** for 
 - **WEBrick** - Ruby web server
 - **JSON** - Data format for API
 
+## 📚 Documentation
+
+- **[ATOMIC-DESIGN.md](./ATOMIC-DESIGN.md)** - Complete guide to the atomic design architecture
+- **[LAN-ACCESS.md](./LAN-ACCESS.md)** - How to access the game on your local network
+
 ## 📁 Project Structure
 
 ```
 euchre-game/
-├── react-app/              # React frontend
+├── react-app/              # TypeScript React frontend
 │   ├── src/
-│   │   ├── components/     # React components
-│   │   │   ├── GameBoard.jsx
-│   │   │   ├── Card.jsx
-│   │   │   ├── Player.jsx
-│   │   │   ├── TrumpSelector.jsx
-│   │   │   ├── VictoryModal.jsx
-│   │   │   ├── DealerDiscardDialog.jsx
-│   │   │   ├── HelpModal.jsx
-│   │   │   └── NewGameModal.jsx
+│   │   ├── components/     # Atomic Design components
+│   │   │   ├── atoms/           # Basic building blocks
+│   │   │   │   ├── GameButton.tsx
+│   │   │   │   ├── PlayingCard.tsx
+│   │   │   │   └── PlayerAvatar.tsx
+│   │   │   ├── molecules/       # Simple combinations
+│   │   │   │   ├── PlayerInfo.tsx
+│   │   │   │   ├── CardHand.tsx
+│   │   │   │   └── ScoreDisplay.tsx
+│   │   │   ├── organisms/       # Complex sections
+│   │   │   │   ├── ScoreBoard.tsx
+│   │   │   │   ├── GamePlayer.tsx
+│   │   │   │   └── GameTable.tsx
+│   │   │   ├── templates/       # Page layouts
+│   │   │   │   └── GameTemplate.tsx
+│   │   │   └── pages/           # Full pages
+│   │   │       └── GamePage.tsx
 │   │   ├── context/        # State management
-│   │   │   └── GameContext.jsx
+│   │   │   └── GameContext.tsx
+│   │   ├── types/          # TypeScript types
+│   │   │   └── game.ts
 │   │   ├── utils/          # Helper functions
-│   │   │   ├── cardUtils.js
-│   │   │   └── playerUtils.js
+│   │   │   ├── cardUtils.ts
+│   │   │   └── playerUtils.ts
 │   │   ├── styles/         # CSS styles
 │   │   │   └── main.css
-│   │   ├── App.jsx         # Root component
-│   │   └── main.jsx        # Entry point
+│   │   ├── App.tsx         # Root component
+│   │   └── main.tsx        # Entry with MUI theme
 │   └── index.html
 ├── backend/                # Ruby Sinatra backend
-│   ├── server.rb           # Main server file
+│   ├── server.rb           # Main server file (LAN enabled)
 │   ├── Gemfile             # Ruby dependencies
 │   ├── config.ru           # Rack configuration
 │   └── game-stats.json     # Persistent stats storage
-├── vite.config.js          # Vite configuration
-├── package-react.json      # React dependencies
+├── vite.config.js          # Vite configuration (LAN enabled)
+├── tsconfig.json           # TypeScript configuration
+├── package-react.json      # React + Material-UI dependencies
+├── ATOMIC-DESIGN.md        # Atomic design documentation
+├── LAN-ACCESS.md           # LAN access guide
 └── README-REACT-RUBY.md    # This file
 ```
 
