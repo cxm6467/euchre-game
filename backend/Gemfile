@@ -4,3 +4,7 @@ gem 'sinatra', '~> 3.0'
 gem 'sinatra-cors', '~> 1.2'
 gem 'webrick', '~> 1.8'
 gem 'json', '~> 2.7'
+
+# Ruby 3.4 compatibility - these were removed from standard library
+gem 'erb'
+gem 'ostruct'
