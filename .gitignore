@@ -41,3 +41,7 @@ out/
 # Temporary files
 *.tmp
 *.temp
+# Ruby/Bundler
+backend/vendor/
+backend/.bundle/
+*.gem

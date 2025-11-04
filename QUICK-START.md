@@ -39,12 +39,18 @@ added 250 packages in 30s
 
 ```bash
 cd backend
+
+# Configure bundler to install gems locally (avoids permission errors)
+bundle config set --local path 'vendor/bundle'
+
+# Install gems
 bundle install
 ```
 
 **Expected output:**
 ```
 Bundle complete! 4 Gemfile dependencies, 11 gems now installed.
+Bundled gems are installed into `./vendor/bundle`
 ```
 
 ## Running the Application
@@ -138,6 +144,19 @@ Example: `http://192.168.1.100:3000`
 cd backend
 bundle install
 ```
+
+### "Permission error while installing gems"
+
+**Error message:** `There was an error while trying to write to /usr/lib/ruby/gems/...`
+
+**Solution:** Configure bundler to install gems locally:
+```bash
+cd backend
+bundle config set --local path 'vendor/bundle'
+bundle install
+```
+
+This installs gems in `backend/vendor/bundle` instead of system directories.
 
 ### "Port 3000 is already in use"
 
