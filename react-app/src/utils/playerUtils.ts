@@ -1,6 +1,8 @@
+import { PlayerPosition, PlayerSettings } from '../types/game'
+
 // Get random NPC profile for AI players
-export const getRandomNPCProfile = (player) => {
-  const profiles = {
+export const getRandomNPCProfile = (player: PlayerPosition): PlayerSettings => {
+  const profiles: Record<PlayerPosition, PlayerSettings[]> = {
     north: [
       { name: 'Alex Thunder', avatar: '⚡' },
       { name: 'Maya Starlight', avatar: '🌟' },
@@ -10,6 +12,9 @@ export const getRandomNPCProfile = (player) => {
       { name: 'Stellar Sue', avatar: '🌟' },
       { name: 'Tech Titan', avatar: '🤖' },
       { name: 'Mystic Mike', avatar: '🎭' }
+    ],
+    south: [
+      { name: 'You', avatar: '😊' }
     ],
     east: [
       { name: 'Bullseye Betty', avatar: '🎯' },
