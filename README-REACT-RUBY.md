@@ -16,7 +16,7 @@ Built with **Atomic Design** principles and configured for **LAN access**.
 
 ### Backend
 - **Ruby 3.x** - Server-side language
-- **Sinatra 4.0** - Lightweight web framework
+- **Sinatra 3.2** - Lightweight web framework
 - **WEBrick** - Ruby web server
 - **JSON** - Data format for API
 
